@@ -1,0 +1,601 @@
+product_id,product_name,price,cogs,category_id,seller_id
+1,Nexa Screen Guard 1,3070.0,1575.0,2,3
+2,Nexa Textbook 2,100.0,72.0,5,40
+3,Blaze Charger 3,424.0,298.0,2,27
+4,Orbit Moisturizer 4,211.0,174.0,6,40
+5,Kora Vacuum Cleaner 5,301.0,232.0,3,47
+6,Zento Tea Pack 6,163.0,110.0,9,42
+7,Orbit RC Car 7,1497.0,756.0,8,40
+8,Aura Handbag 8,3202.0,2163.0,4,51
+9,Lumi Action Figure 9,1039.0,493.0,8,43
+10,Zento Power Bank 10,678.0,422.0,2,49
+11,Vita Watch 11,2817.0,1707.0,4,25
+12,Lumi Screen Guard 12,2172.0,1349.0,2,13
+13,Nexa Dry Fruits 13,51.0,29.0,9,15
+14,Aura Action Figure 14,375.0,272.0,8,37
+15,Aura Snack Combo 15,152.0,120.0,9,32
+16,Nexa Olive Oil 16,125.0,95.0,9,5
+17,Orbit Bookshelf 17,26125.0,18316.0,10,13
+18,Zento Power Bank 18,20909.0,13912.0,2,59
+19,Terra Sofa 19,18666.0,8632.0,10,44
+20,Vita Self-Help Book 20,140.0,103.0,5,46
+21,Nexa Jeans 21,3372.0,2252.0,4,12
+22,Orbit Textbook 22,536.0,299.0,5,4
+23,Zento Water Bottle 23,462.0,268.0,3,18
+24,Zento Mixer Grinder 24,3277.0,2701.0,3,52
+25,Vita Phone Case 25,4460.0,3121.0,2,31
+26,Aura Tablet 26,9064.0,5804.0,1,48
+27,Orbit Handbag 27,419.0,293.0,4,30
+28,Blaze Dry Fruits 28,289.0,178.0,9,30
+29,Kora Face Wash 29,204.0,130.0,6,37
+30,Orbit Handbag 30,489.0,277.0,4,58
+31,Nexa T-Shirt 31,445.0,279.0,4,27
+32,Nexa Handbag 32,5229.0,3787.0,4,36
+33,Kora Charger 33,1469.0,685.0,2,56
+34,Vita Action Figure 34,479.0,368.0,8,23
+35,Vita Charger 35,1809.0,1019.0,2,51
+36,Orbit Cricket Bat 36,6107.0,4416.0,7,33
+37,Aura Dumbbell Set 37,1701.0,1203.0,7,53
+38,Orbit Novel 38,981.0,698.0,5,29
+39,Kora Snack Combo 39,137.0,95.0,9,38
+40,Blaze Water Bottle 40,327.0,273.0,3,20
+41,Zento Dry Fruits 41,329.0,215.0,9,39
+42,Pixel Football 42,743.0,552.0,7,20
+43,Orbit Puzzle 43,2085.0,1527.0,8,37
+44,Pixel Moisturizer 44,2392.0,1302.0,6,48
+45,Nexa Snack Combo 45,247.0,139.0,9,27
+46,Aura Office Chair 46,41425.0,25667.0,10,26
+47,Kora Sneakers 47,1570.0,881.0,4,20
+48,Blaze RC Car 48,363.0,217.0,8,44
+49,Terra Treadmill 49,1283.0,778.0,7,36
+50,Terra Jeans 50,334.0,231.0,4,31
+51,Nexa Sofa 51,25538.0,13738.0,10,2
+52,Orbit Vacuum Cleaner 52,309.0,238.0,3,7
+53,Zento Comic 53,214.0,134.0,5,1
+54,Nexa Headphones 54,15181.0,11120.0,1,52
+55,Aura Earbuds 55,380.0,183.0,2,52
+56,Kora Snack Combo 56,64.0,41.0,9,5
+57,Pixel Water Bottle 57,4033.0,1860.0,3,3
+58,Pixel Cookware Set 58,271.0,195.0,3,47
+59,Orbit Phone Case 59,4303.0,2528.0,2,32
+60,Blaze Sneakers 60,826.0,685.0,4,19
+61,Zento Building Blocks 61,316.0,183.0,8,37
+62,Zento Tea Pack 62,93.0,63.0,9,15
+63,Zento Headphones 63,34163.0,18891.0,1,12
+64,Terra Cookbook 64,1063.0,742.0,5,23
+65,Blaze Watch 65,455.0,290.0,4,54
+66,Vita Novel 66,1085.0,649.0,5,47
+67,Blaze Watch 67,1780.0,946.0,4,12
+68,Vita Mixer Grinder 68,3187.0,1576.0,3,34
+69,Terra T-Shirt 69,2514.0,1252.0,4,54
+70,Aura Cookbook 70,574.0,488.0,5,58
+71,Pixel T-Shirt 71,3495.0,2149.0,4,46
+72,Terra Kurta 72,1275.0,575.0,4,8
+73,Nexa Building Blocks 73,862.0,716.0,8,15
+74,Vita Football 74,684.0,313.0,7,14
+75,Kora Cookware Set 75,314.0,194.0,3,10
+76,Blaze Puzzle 76,1327.0,978.0,8,11
+77,Pixel Dry Fruits 77,55.0,45.0,9,19
+78,Terra Screen Guard 78,1396.0,1026.0,2,34
+79,Lumi Comic 79,125.0,79.0,5,24
+80,Vita Cookware Set 80,454.0,381.0,3,26
+81,Kora Football 81,2271.0,1058.0,7,15
+82,Vita Phone Case 82,10029.0,8472.0,2,10
+83,Lumi Face Wash 83,563.0,445.0,6,60
+84,Zento Earbuds 84,495.0,407.0,2,36
+85,Vita Handbag 85,1097.0,605.0,4,14
+86,Nexa Bed Frame 86,6930.0,3513.0,10,49
+87,Nexa Dinner Set 87,4481.0,3205.0,3,50
+88,Kora Olive Oil 88,355.0,233.0,9,59
+89,Blaze Bookshelf 89,10351.0,6824.0,10,10
+90,Zento Basmati Rice 90,259.0,212.0,9,39
+91,Vita Smartphone 91,66264.0,46254.0,2,59
+92,Orbit Building Blocks 92,1794.0,1031.0,8,49
+93,Pixel Smart TV 93,11476.0,7001.0,1,14
+94,Pixel Air Fryer 94,1579.0,795.0,3,54
+95,Kora Basmati Rice 95,54.0,28.0,9,26
+96,Lumi Perfume 96,2919.0,1481.0,6,30
+97,Aura Handbag 97,779.0,603.0,4,34
+98,Pixel Vacuum Cleaner 98,602.0,441.0,3,47
+99,Terra RC Car 99,3992.0,2643.0,8,8
+100,Pixel Yoga Mat 100,3080.0,1847.0,7,33
+101,Zento Kurta 101,345.0,248.0,4,50
+102,Orbit Snack Combo 102,61.0,47.0,9,33
+103,Pixel Screen Guard 103,345.0,277.0,2,17
+104,Zento Charger 104,8535.0,5708.0,2,4
+105,Lumi Face Wash 105,187.0,145.0,6,33
+106,Orbit Bookshelf 106,37119.0,24295.0,10,43
+107,Nexa Earbuds 107,56226.0,35974.0,2,33
+108,Nexa Screen Guard 108,6327.0,5037.0,2,59
+109,Kora Tablet 109,18731.0,11324.0,1,37
+110,Zento Tea Pack 110,133.0,81.0,9,31
+111,Zento Phone Case 111,428.0,245.0,2,4
+112,Orbit Sneakers 112,2730.0,1795.0,4,34
+113,Pixel Bed Frame 113,3355.0,2241.0,10,11
+114,Vita Camera 114,2129.0,1520.0,1,44
+115,Lumi Cookbook 115,215.0,134.0,5,10
+116,Vita Handbag 116,310.0,167.0,4,55
+117,Aura Puzzle 117,621.0,495.0,8,19
+118,Pixel Dinner Set 118,4240.0,2495.0,3,27
+119,Lumi Watch 119,3307.0,2709.0,4,9
+120,Kora Charger 120,8761.0,4669.0,2,13
+121,Lumi Yoga Mat 121,5021.0,3384.0,7,56
+122,Nexa Board Game 122,568.0,378.0,8,18
+123,Lumi Tablet 123,48455.0,37866.0,1,31
+124,Terra Dinner Set 124,1777.0,898.0,3,59
+125,Vita Dry Fruits 125,105.0,85.0,9,38
+126,Nexa Camera 126,71602.0,47441.0,1,3
+127,Lumi Water Bottle 127,653.0,447.0,3,22
+128,Orbit Comic 128,106.0,69.0,5,24
+129,Terra Dinner Set 129,568.0,264.0,3,17
+130,Pixel Power Bank 130,2322.0,1507.0,2,15
+131,Nexa T-Shirt 131,858.0,477.0,4,31
+132,Aura Smartphone 132,5614.0,3296.0,2,23
+133,Terra Kurta 133,4226.0,2999.0,4,18
+134,Kora Football 134,606.0,393.0,7,25
+135,Zento Novel 135,363.0,177.0,5,21
+136,Orbit Tablet 136,6038.0,2894.0,1,14
+137,Aura Basmati Rice 137,815.0,427.0,9,28
+138,Aura Charger 138,721.0,380.0,2,57
+139,Blaze Football 139,295.0,205.0,7,31
+140,Pixel Mixer Grinder 140,1750.0,912.0,3,36
+141,Orbit Puzzle 141,1359.0,1091.0,8,60
+142,Vita Earbuds 142,25512.0,13621.0,2,37
+143,Blaze Phone Case 143,8071.0,3926.0,2,14
+144,Vita T-Shirt 144,3045.0,2437.0,4,24
+145,Lumi Bluetooth Speaker 145,7488.0,4254.0,1,30
+146,Vita Phone Case 146,359.0,223.0,2,29
+147,Aura Cricket Bat 147,310.0,258.0,7,9
+148,Terra Action Figure 148,169.0,140.0,8,7
+149,Aura Bluetooth Speaker 149,5768.0,4245.0,1,21
+150,Terra Olive Oil 150,267.0,128.0,9,55
+151,Vita Board Game 151,481.0,331.0,8,44
+152,Lumi Dry Fruits 152,334.0,282.0,9,51
+153,Lumi Perfume 153,679.0,563.0,6,11
+154,Lumi Moisturizer 154,1266.0,623.0,6,25
+155,Aura Kurta 155,2210.0,1345.0,4,35
+156,Lumi Shampoo 156,407.0,235.0,6,27
+157,Blaze Dry Fruits 157,160.0,80.0,9,26
+158,Vita Smart TV 158,16465.0,11985.0,1,22
+159,Vita Dinner Set 159,2621.0,1467.0,3,4
+160,Kora Smart TV 160,5441.0,3199.0,1,52
+161,Zento Study Table 161,6495.0,3158.0,10,56
+162,Terra Watch 162,2397.0,1556.0,4,5
+163,Lumi Moisturizer 163,1150.0,590.0,6,25
+164,Aura Snack Combo 164,78.0,49.0,9,32
+165,Nexa Bed Frame 165,8945.0,4538.0,10,48
+166,Nexa Power Bank 166,43918.0,36520.0,2,60
+167,Orbit Board Game 167,168.0,85.0,8,25
+168,Kora Dry Fruits 168,914.0,602.0,9,45
+169,Zento Camera 169,2926.0,1547.0,1,57
+170,Orbit Cricket Bat 170,1376.0,661.0,7,50
+171,Kora Dinner Set 171,1246.0,662.0,3,18
+172,Zento Moisturizer 172,154.0,73.0,6,50
+173,Kora Watch 173,4655.0,2354.0,4,25
+174,Aura Screen Guard 174,3802.0,2461.0,2,2
+175,Pixel Camera 175,74632.0,53043.0,1,46
+176,Aura Camera 176,4852.0,2353.0,1,51
+177,Terra Camera 177,52055.0,32608.0,1,21
+178,Lumi Trimmer 178,2740.0,1870.0,6,28
+179,Kora Vacuum Cleaner 179,2209.0,1201.0,3,22
+180,Blaze Earbuds 180,928.0,556.0,2,8
+181,Terra Perfume 181,1296.0,620.0,6,60
+182,Lumi Face Wash 182,843.0,454.0,6,2
+183,Nexa Kurta 183,5080.0,3234.0,4,34
+184,Blaze Office Chair 184,8899.0,7530.0,10,1
+185,Terra Air Fryer 185,635.0,539.0,3,42
+186,Kora Building Blocks 186,235.0,198.0,8,55
+187,Vita Tablet 187,26204.0,16226.0,1,39
+188,Pixel Treadmill 188,8154.0,3932.0,7,37
+189,Lumi Office Chair 189,2713.0,1572.0,10,50
+190,Vita Tea Pack 190,617.0,336.0,9,59
+191,Vita Novel 191,1000.0,456.0,5,52
+192,Blaze Trimmer 192,189.0,92.0,6,14
+193,Pixel Air Fryer 193,320.0,202.0,3,34
+194,Zento Trimmer 194,1324.0,776.0,6,50
+195,Orbit Board Game 195,1256.0,656.0,8,18
+196,Orbit Study Table 196,3050.0,2246.0,10,41
+197,Terra Kurta 197,3652.0,2165.0,4,2
+198,Blaze Camera 198,12788.0,10112.0,1,53
+199,Blaze Self-Help Book 199,952.0,520.0,5,37
+200,Terra Headphones 200,54612.0,36336.0,1,45
+201,Terra Earbuds 201,28052.0,14690.0,2,50
+202,Orbit Dinner Set 202,1851.0,1200.0,3,14
+203,Kora Treadmill 203,519.0,265.0,7,28
+204,Vita Earbuds 204,5057.0,2602.0,2,52
+205,Zento Smartphone 205,525.0,365.0,2,10
+206,Blaze Laptop 206,22265.0,12369.0,1,50
+207,Kora Tea Pack 207,77.0,40.0,9,18
+208,Orbit Face Wash 208,748.0,615.0,6,35
+209,Terra Monitor 209,1874.0,876.0,1,31
+210,Pixel Monitor 210,5113.0,3457.0,1,42
+211,Orbit Textbook 211,177.0,118.0,5,51
+212,Vita Water Bottle 212,2903.0,1597.0,3,21
+213,Zento Textbook 213,705.0,445.0,5,11
+214,Nexa Sneakers 214,355.0,172.0,4,26
+215,Pixel Bookshelf 215,29193.0,21559.0,10,37
+216,Nexa Air Fryer 216,8217.0,4426.0,3,46
+217,Vita Shampoo 217,439.0,232.0,6,46
+218,Blaze Monitor 218,22279.0,12832.0,1,21
+219,Terra Bed Frame 219,8004.0,6491.0,10,57
+220,Kora Study Table 220,3904.0,3001.0,10,5
+221,Zento Football 221,1493.0,1237.0,7,8
+222,Terra Jeans 222,387.0,275.0,4,2
+223,Kora Screen Guard 223,40559.0,29007.0,2,56
+224,Orbit Puzzle 224,3118.0,2002.0,8,11
+225,Zento Yoga Mat 225,4560.0,3703.0,7,37
+226,Vita Charger 226,6937.0,4539.0,2,49
+227,Vita T-Shirt 227,1592.0,943.0,4,47
+228,Pixel Sneakers 228,5729.0,4046.0,4,57
+229,Orbit Puzzle 229,337.0,225.0,8,4
+230,Vita Shampoo 230,189.0,94.0,6,25
+231,Terra Trimmer 231,878.0,533.0,6,31
+232,Aura Trimmer 232,421.0,242.0,6,42
+233,Orbit Smartphone 233,1812.0,1429.0,2,38
+234,Terra Air Fryer 234,205.0,123.0,3,34
+235,Zento Tablet 235,17230.0,13416.0,1,19
+236,Vita Puzzle 236,355.0,223.0,8,7
+237,Vita T-Shirt 237,525.0,394.0,4,26
+238,Aura T-Shirt 238,338.0,170.0,4,16
+239,Pixel Charger 239,2292.0,1879.0,2,34
+240,Aura Charger 240,40672.0,26121.0,2,48
+241,Vita Textbook 241,229.0,127.0,5,34
+242,Blaze Earbuds 242,13307.0,7274.0,2,35
+243,Blaze Laptop 243,33216.0,18469.0,1,3
+244,Vita Football 244,695.0,415.0,7,39
+245,Orbit Dinner Set 245,6939.0,5114.0,3,27
+246,Pixel Air Fryer 246,3960.0,3286.0,3,8
+247,Kora Sneakers 247,1600.0,1148.0,4,13
+248,Kora Puzzle 248,149.0,100.0,8,47
+249,Zento Vacuum Cleaner 249,232.0,146.0,3,56
+250,Zento Football 250,8692.0,6791.0,7,31
+251,Pixel Bookshelf 251,23984.0,18944.0,10,59
+252,Kora Perfume 252,2874.0,1630.0,6,11
+253,Kora T-Shirt 253,4476.0,3721.0,4,18
+254,Zento Treadmill 254,215.0,131.0,7,56
+255,Nexa Kurta 255,3214.0,2475.0,4,11
+256,Zento Jeans 256,1157.0,968.0,4,40
+257,Terra Handbag 257,3192.0,2335.0,4,14
+258,Blaze Cookware Set 258,205.0,105.0,3,20
+259,Pixel Laptop 259,4881.0,3341.0,1,29
+260,Aura Kurta 260,2846.0,1416.0,4,22
+261,Nexa Smart TV 261,38566.0,29528.0,1,53
+262,Pixel Sneakers 262,1918.0,1079.0,4,59
+263,Kora Cookbook 263,210.0,153.0,5,31
+264,Orbit Sofa 264,6131.0,4991.0,10,32
+265,Kora Camera 265,78550.0,41035.0,1,4
+266,Vita Shampoo 266,596.0,362.0,6,15
+267,Zento Kurta 267,1143.0,810.0,4,3
+268,Orbit Tablet 268,14395.0,8894.0,1,52
+269,Aura Screen Guard 269,2949.0,1533.0,2,14
+270,Vita Smart TV 270,14415.0,6654.0,1,21
+271,Terra Earbuds 271,3351.0,2053.0,2,51
+272,Zento Smartphone 272,30371.0,21554.0,2,43
+273,Zento Kurta 273,4568.0,3104.0,4,38
+274,Zento Handbag 274,4895.0,2509.0,4,3
+275,Aura Monitor 275,15118.0,9529.0,1,34
+276,Kora Earbuds 276,3540.0,2116.0,2,34
+277,Blaze Tablet 277,26922.0,15068.0,1,20
+278,Aura Self-Help Book 278,802.0,595.0,5,45
+279,Lumi Cookware Set 279,2268.0,1302.0,3,56
+280,Lumi Comic 280,568.0,378.0,5,16
+281,Blaze Phone Case 281,19751.0,16182.0,2,20
+282,Orbit Smart TV 282,23923.0,15926.0,1,20
+283,Vita Sofa 283,21604.0,15054.0,10,51
+284,Pixel Headphones 284,3524.0,1689.0,1,5
+285,Kora Monitor 285,11542.0,6016.0,1,54
+286,Lumi Smartphone 286,8010.0,3928.0,2,47
+287,Pixel Bookshelf 287,2518.0,1903.0,10,30
+288,Vita Textbook 288,838.0,657.0,5,36
+289,Lumi Comic 289,454.0,238.0,5,54
+290,Kora Study Table 290,3631.0,1952.0,10,47
+291,Orbit Headphones 291,42432.0,24580.0,1,17
+292,Terra Study Table 292,19863.0,13635.0,10,4
+293,Pixel Phone Case 293,20720.0,14477.0,2,40
+294,Pixel Moisturizer 294,514.0,372.0,6,9
+295,Nexa Watch 295,3875.0,3147.0,4,6
+296,Lumi Cookware Set 296,1191.0,677.0,3,59
+297,Blaze Bed Frame 297,13004.0,9278.0,10,29
+298,Pixel Earbuds 298,300.0,202.0,2,40
+299,Orbit Bed Frame 299,16122.0,9227.0,10,14
+300,Orbit Air Fryer 300,4436.0,3606.0,3,7
+301,Zento Trimmer 301,893.0,436.0,6,4
+302,Vita Bed Frame 302,10502.0,7717.0,10,22
+303,Aura Bluetooth Speaker 303,41331.0,30632.0,1,1
+304,Pixel Study Table 304,17916.0,14622.0,10,26
+305,Zento Novel 305,198.0,130.0,5,20
+306,Orbit Cricket Bat 306,7700.0,4456.0,7,32
+307,Lumi Charger 307,15578.0,12168.0,2,36
+308,Vita Jeans 308,5787.0,4388.0,4,19
+309,Terra Perfume 309,3196.0,2078.0,6,28
+310,Blaze Kurta 310,4705.0,3562.0,4,5
+311,Nexa Smartphone 311,20383.0,11356.0,2,19
+312,Zento Screen Guard 312,9016.0,6183.0,2,59
+313,Orbit Tea Pack 313,88.0,70.0,9,60
+314,Nexa Smart TV 314,13876.0,8009.0,1,30
+315,Nexa Dumbbell Set 315,3680.0,2368.0,7,57
+316,Zento Study Table 316,11266.0,9355.0,10,31
+317,Pixel Laptop 317,52475.0,40368.0,1,8
+318,Nexa Earbuds 318,552.0,444.0,2,53
+319,Vita Trimmer 319,496.0,300.0,6,25
+320,Terra Monitor 320,11906.0,10103.0,1,37
+321,Aura Comic 321,291.0,149.0,5,39
+322,Orbit Shampoo 322,210.0,138.0,6,19
+323,Kora Self-Help Book 323,145.0,93.0,5,45
+324,Vita Mixer Grinder 324,7435.0,5720.0,3,31
+325,Terra Shampoo 325,687.0,559.0,6,22
+326,Pixel Novel 326,112.0,83.0,5,18
+327,Orbit Charger 327,328.0,230.0,2,45
+328,Blaze Novel 328,323.0,201.0,5,15
+329,Orbit Snack Combo 329,86.0,56.0,9,8
+330,Vita Trimmer 330,1380.0,902.0,6,53
+331,Blaze Kurta 331,3248.0,1488.0,4,20
+332,Lumi Vacuum Cleaner 332,534.0,348.0,3,39
+333,Terra Laptop 333,16946.0,13428.0,1,43
+334,Aura Charger 334,709.0,520.0,2,51
+335,Zento Headphones 335,5199.0,3994.0,1,38
+336,Terra Study Table 336,32630.0,19780.0,10,43
+337,Vita Smartphone 337,6258.0,4140.0,2,51
+338,Vita Puzzle 338,2748.0,1273.0,8,57
+339,Lumi Charger 339,1053.0,635.0,2,3
+340,Vita Water Bottle 340,829.0,530.0,3,45
+341,Aura Jeans 341,1228.0,678.0,4,11
+342,Aura Water Bottle 342,1585.0,733.0,3,54
+343,Pixel Puzzle 343,3969.0,2882.0,8,3
+344,Terra Sofa 344,3480.0,2172.0,10,15
+345,Kora Dry Fruits 345,904.0,557.0,9,12
+346,Zento Screen Guard 346,37341.0,20537.0,2,37
+347,Zento Action Figure 347,920.0,612.0,8,1
+348,Nexa Smartphone 348,2045.0,1279.0,2,2
+349,Orbit Basmati Rice 349,290.0,185.0,9,31
+350,Pixel Handbag 350,719.0,491.0,4,59
+351,Blaze Air Fryer 351,6295.0,2849.0,3,32
+352,Nexa Charger 352,4844.0,3939.0,2,27
+353,Pixel Camera 353,66432.0,31783.0,1,40
+354,Blaze Charger 354,9710.0,6121.0,2,34
+355,Aura Dry Fruits 355,285.0,152.0,9,24
+356,Blaze Action Figure 356,1546.0,1020.0,8,36
+357,Nexa Bed Frame 357,10728.0,6030.0,10,1
+358,Nexa Bluetooth Speaker 358,60875.0,48335.0,1,15
+359,Blaze Cookbook 359,157.0,96.0,5,41
+360,Nexa Smartphone 360,68928.0,48629.0,2,21
+361,Pixel Comic 361,751.0,413.0,5,4
+362,Vita Water Bottle 362,8216.0,3761.0,3,8
+363,Terra Mixer Grinder 363,1605.0,982.0,3,52
+364,Nexa Comic 364,799.0,531.0,5,20
+365,Vita Power Bank 365,1661.0,1053.0,2,2
+366,Lumi T-Shirt 366,2938.0,2453.0,4,44
+367,Terra Moisturizer 367,232.0,170.0,6,32
+368,Orbit Camera 368,5273.0,4473.0,1,28
+369,Aura Office Chair 369,9067.0,5150.0,10,54
+370,Pixel Watch 370,786.0,602.0,4,19
+371,Aura RC Car 371,532.0,358.0,8,35
+372,Aura Perfume 372,1984.0,1378.0,6,45
+373,Pixel Cricket Bat 373,529.0,447.0,7,37
+374,Aura Football 374,3409.0,2426.0,7,13
+375,Vita Snack Combo 375,63.0,51.0,9,41
+376,Terra Textbook 376,669.0,495.0,5,45
+377,Orbit Power Bank 377,25017.0,12532.0,2,8
+378,Blaze Tablet 378,7769.0,5670.0,1,10
+379,Blaze Self-Help Book 379,600.0,386.0,5,41
+380,Nexa Headphones 380,63584.0,51981.0,1,8
+381,Blaze Screen Guard 381,26263.0,20294.0,2,53
+382,Kora Laptop 382,7419.0,3648.0,1,7
+383,Orbit Comic 383,331.0,167.0,5,59
+384,Lumi Charger 384,23308.0,11138.0,2,41
+385,Zento Novel 385,205.0,133.0,5,27
+386,Terra Puzzle 386,2098.0,1012.0,8,17
+387,Pixel Building Blocks 387,438.0,324.0,8,21
+388,Aura Vacuum Cleaner 388,6485.0,4351.0,3,45
+389,Vita Cookbook 389,123.0,96.0,5,46
+390,Blaze Textbook 390,111.0,62.0,5,13
+391,Orbit Jeans 391,5958.0,3918.0,4,33
+392,Zento Trimmer 392,2318.0,1152.0,6,60
+393,Zento Charger 393,41563.0,33410.0,2,16
+394,Pixel Bookshelf 394,39089.0,20326.0,10,42
+395,Kora Bluetooth Speaker 395,9026.0,4431.0,1,11
+396,Lumi Puzzle 396,383.0,204.0,8,51
+397,Pixel Novel 397,137.0,106.0,5,11
+398,Vita Charger 398,4924.0,2424.0,2,18
+399,Aura Dumbbell Set 399,460.0,320.0,7,28
+400,Pixel Bluetooth Speaker 400,69126.0,51739.0,1,23
+401,Kora Building Blocks 401,151.0,113.0,8,11
+402,Lumi Novel 402,142.0,75.0,5,39
+403,Pixel Monitor 403,4115.0,1953.0,1,2
+404,Nexa Bluetooth Speaker 404,3387.0,2132.0,1,60
+405,Pixel Cricket Bat 405,471.0,250.0,7,4
+406,Nexa Air Fryer 406,3392.0,2475.0,3,21
+407,Nexa Olive Oil 407,150.0,89.0,9,56
+408,Terra Treadmill 408,2075.0,1307.0,7,10
+409,Nexa Moisturizer 409,2475.0,1226.0,6,5
+410,Blaze Power Bank 410,8676.0,5874.0,2,45
+411,Pixel Yoga Mat 411,2809.0,1473.0,7,5
+412,Aura Sofa 412,7190.0,5188.0,10,54
+413,Vita Monitor 413,2885.0,1380.0,1,28
+414,Nexa Dinner Set 414,796.0,669.0,3,53
+415,Nexa Screen Guard 415,65522.0,47426.0,2,15
+416,Nexa Cookware Set 416,2925.0,1529.0,3,9
+417,Lumi Cricket Bat 417,573.0,261.0,7,58
+418,Vita Kurta 418,1156.0,675.0,4,46
+419,Terra Self-Help Book 419,796.0,407.0,5,55
+420,Lumi Dinner Set 420,3578.0,1923.0,3,20
+421,Pixel Phone Case 421,6865.0,5486.0,2,25
+422,Pixel Screen Guard 422,42105.0,29106.0,2,35
+423,Zento Dry Fruits 423,489.0,255.0,9,27
+424,Pixel Cookbook 424,492.0,331.0,5,15
+425,Lumi Vacuum Cleaner 425,452.0,250.0,3,23
+426,Blaze Board Game 426,211.0,177.0,8,37
+427,Nexa Smart TV 427,78030.0,36136.0,1,3
+428,Vita Smartphone 428,8499.0,6314.0,2,21
+429,Terra Power Bank 429,3053.0,2318.0,2,18
+430,Lumi Office Chair 430,13719.0,6542.0,10,5
+431,Orbit Football 431,252.0,131.0,7,8
+432,Kora Cookbook 432,770.0,465.0,5,30
+433,Aura Headphones 433,3642.0,2904.0,1,7
+434,Aura Earbuds 434,26831.0,17837.0,2,21
+435,Zento Trimmer 435,805.0,573.0,6,34
+436,Zento Mixer Grinder 436,658.0,502.0,3,53
+437,Kora Study Table 437,2728.0,2131.0,10,6
+438,Pixel Football 438,4460.0,2857.0,7,27
+439,Vita Handbag 439,508.0,332.0,4,7
+440,Pixel Dumbbell Set 440,242.0,178.0,7,26
+441,Orbit Office Chair 441,22221.0,12340.0,10,29
+442,Orbit Sneakers 442,854.0,676.0,4,48
+443,Zento Face Wash 443,509.0,233.0,6,27
+444,Terra Tea Pack 444,114.0,60.0,9,57
+445,Zento Earbuds 445,36413.0,28041.0,2,9
+446,Lumi Basmati Rice 446,136.0,80.0,9,4
+447,Vita Headphones 447,3547.0,1809.0,1,1
+448,Lumi Face Wash 448,395.0,207.0,6,22
+449,Kora Action Figure 449,291.0,193.0,8,12
+450,Zento Cookbook 450,219.0,173.0,5,6
+451,Aura T-Shirt 451,383.0,183.0,4,15
+452,Blaze Textbook 452,147.0,68.0,5,59
+453,Pixel Earbuds 453,3076.0,1957.0,2,49
+454,Terra Power Bank 454,40785.0,33952.0,2,2
+455,Aura Power Bank 455,412.0,231.0,2,55
+456,Vita Cookbook 456,168.0,140.0,5,13
+457,Nexa T-Shirt 457,4558.0,3670.0,4,25
+458,Kora Phone Case 458,43262.0,24367.0,2,20
+459,Vita Dry Fruits 459,501.0,389.0,9,25
+460,Lumi Dinner Set 460,563.0,408.0,3,46
+461,Terra Watch 461,1053.0,689.0,4,43
+462,Zento Sneakers 462,563.0,349.0,4,36
+463,Vita Charger 463,613.0,476.0,2,38
+464,Vita Dumbbell Set 464,847.0,650.0,7,44
+465,Pixel Watch 465,1681.0,1265.0,4,12
+466,Terra Headphones 466,6548.0,5561.0,1,24
+467,Pixel Study Table 467,14611.0,9372.0,10,7
+468,Vita Puzzle 468,395.0,305.0,8,43
+469,Terra Dumbbell Set 469,744.0,591.0,7,27
+470,Nexa Snack Combo 470,733.0,392.0,9,39
+471,Nexa Olive Oil 471,989.0,462.0,9,34
+472,Nexa Vacuum Cleaner 472,801.0,490.0,3,17
+473,Vita Textbook 473,412.0,327.0,5,9
+474,Terra Self-Help Book 474,198.0,112.0,5,59
+475,Orbit Screen Guard 475,403.0,294.0,2,18
+476,Orbit Power Bank 476,18482.0,8371.0,2,7
+477,Zento Tablet 477,3021.0,1789.0,1,19
+478,Nexa Shampoo 478,571.0,398.0,6,55
+479,Terra Action Figure 479,740.0,371.0,8,16
+480,Orbit Football 480,402.0,325.0,7,60
+481,Kora Mixer Grinder 481,299.0,153.0,3,28
+482,Kora Earbuds 482,2091.0,1702.0,2,52
+483,Zento T-Shirt 483,5200.0,2790.0,4,40
+484,Terra Cookbook 484,459.0,389.0,5,3
+485,Orbit Snack Combo 485,181.0,125.0,9,31
+486,Blaze Olive Oil 486,56.0,27.0,9,26
+487,Vita Dry Fruits 487,382.0,182.0,9,13
+488,Vita Tea Pack 488,67.0,32.0,9,33
+489,Pixel Study Table 489,11994.0,8227.0,10,7
+490,Vita Handbag 490,2851.0,2206.0,4,42
+491,Terra Laptop 491,8497.0,5193.0,1,50
+492,Pixel Smart TV 492,5111.0,3209.0,1,6
+493,Vita Dinner Set 493,244.0,167.0,3,29
+494,Nexa Power Bank 494,343.0,227.0,2,40
+495,Kora Earbuds 495,3308.0,2399.0,2,4
+496,Lumi Bookshelf 496,32120.0,20516.0,10,24
+497,Pixel Power Bank 497,1170.0,861.0,2,16
+498,Vita Bed Frame 498,13138.0,11153.0,10,3
+499,Zento Treadmill 499,2702.0,1595.0,7,49
+500,Kora Face Wash 500,181.0,82.0,6,27
+501,Lumi Trimmer 501,242.0,121.0,6,46
+502,Nexa Cookware Set 502,833.0,559.0,3,36
+503,Kora Perfume 503,1235.0,726.0,6,53
+504,Zento Phone Case 504,3479.0,2874.0,2,60
+505,Terra Study Table 505,20872.0,14631.0,10,37
+506,Vita Vacuum Cleaner 506,8463.0,5570.0,3,22
+507,Zento Phone Case 507,20728.0,15944.0,2,26
+508,Pixel Yoga Mat 508,8738.0,4836.0,7,50
+509,Orbit Trimmer 509,1612.0,1254.0,6,26
+510,Blaze Watch 510,3851.0,1738.0,4,32
+511,Orbit Face Wash 511,2062.0,1439.0,6,12
+512,Kora Charger 512,17715.0,14595.0,2,60
+513,Lumi Face Wash 513,1872.0,1432.0,6,40
+514,Terra Power Bank 514,55531.0,43950.0,2,20
+515,Blaze Smartphone 515,4258.0,2592.0,2,36
+516,Pixel Screen Guard 516,10594.0,8260.0,2,25
+517,Orbit Water Bottle 517,1843.0,1235.0,3,10
+518,Zento Vacuum Cleaner 518,7879.0,5495.0,3,53
+519,Vita Sneakers 519,1090.0,516.0,4,54
+520,Kora Power Bank 520,29207.0,15498.0,2,51
+521,Pixel Phone Case 521,26064.0,17473.0,2,23
+522,Orbit Cookbook 522,1091.0,517.0,5,16
+523,Vita Camera 523,4156.0,3103.0,1,3
+524,Pixel Moisturizer 524,1400.0,1100.0,6,44
+525,Lumi Sofa 525,22288.0,18235.0,10,20
+526,Vita Sneakers 526,4956.0,2432.0,4,54
+527,Lumi Dry Fruits 527,1091.0,901.0,9,53
+528,Terra Camera 528,15700.0,7490.0,1,8
+529,Lumi Laptop 529,16066.0,10276.0,1,56
+530,Vita Cricket Bat 530,377.0,296.0,7,9
+531,Terra Football 531,8181.0,3912.0,7,30
+532,Zento Snack Combo 532,117.0,54.0,9,29
+533,Orbit Tablet 533,29160.0,13413.0,1,58
+534,Lumi Building Blocks 534,2043.0,1337.0,8,40
+535,Terra Water Bottle 535,1340.0,1038.0,3,53
+536,Zento Cookware Set 536,496.0,248.0,3,36
+537,Kora Charger 537,860.0,430.0,2,50
+538,Aura Sofa 538,29722.0,20134.0,10,52
+539,Nexa Camera 539,12142.0,6602.0,1,52
+540,Blaze Building Blocks 540,200.0,148.0,8,25
+541,Nexa Perfume 541,1433.0,1189.0,6,23
+542,Kora Yoga Mat 542,516.0,390.0,7,60
+543,Nexa Cricket Bat 543,5619.0,4500.0,7,46
+544,Lumi Dry Fruits 544,141.0,93.0,9,56
+545,Terra Power Bank 545,916.0,717.0,2,35
+546,Terra Camera 546,2123.0,1111.0,1,56
+547,Vita Self-Help Book 547,355.0,169.0,5,44
+548,Lumi Water Bottle 548,1396.0,994.0,3,45
+549,Vita Tablet 549,32512.0,15306.0,1,11
+550,Blaze Power Bank 550,4013.0,3238.0,2,35
+551,Vita Dinner Set 551,880.0,639.0,3,44
+552,Vita Bluetooth Speaker 552,4379.0,3638.0,1,46
+553,Kora Bluetooth Speaker 553,4685.0,2696.0,1,58
+554,Vita Basmati Rice 554,1172.0,755.0,9,20
+555,Orbit Vacuum Cleaner 555,406.0,303.0,3,19
+556,Lumi Sofa 556,43488.0,23793.0,10,59
+557,Zento Bookshelf 557,6432.0,4288.0,10,60
+558,Zento Smartphone 558,490.0,350.0,2,11
+559,Pixel Cricket Bat 559,513.0,432.0,7,23
+560,Vita Self-Help Book 560,115.0,86.0,5,57
+561,Vita Moisturizer 561,1804.0,897.0,6,12
+562,Aura Smart TV 562,12232.0,7830.0,1,47
+563,Orbit Smartphone 563,1966.0,1348.0,2,7
+564,Orbit Camera 564,22559.0,11475.0,1,11
+565,Aura Comic 565,477.0,297.0,5,48
+566,Terra Study Table 566,37821.0,21316.0,10,37
+567,Terra Trimmer 567,3097.0,1541.0,6,34
+568,Aura Yoga Mat 568,2665.0,1745.0,7,52
+569,Orbit Bookshelf 569,26578.0,13721.0,10,19
+570,Kora Trimmer 570,1818.0,1248.0,6,31
+571,Nexa Headphones 571,11213.0,5807.0,1,37
+572,Pixel Basmati Rice 572,546.0,404.0,9,45
+573,Pixel Water Bottle 573,279.0,147.0,3,20
+574,Vita Monitor 574,33417.0,27018.0,1,39
+575,Kora Jeans 575,5351.0,2464.0,4,27
+576,Blaze Office Chair 576,3196.0,2106.0,10,33
+577,Blaze Earbuds 577,32009.0,18503.0,2,52
+578,Vita Sneakers 578,4907.0,2650.0,4,24
+579,Orbit Earbuds 579,1059.0,676.0,2,41
+580,Zento Laptop 580,12861.0,10119.0,1,57
+581,Orbit Laptop 581,66983.0,54666.0,1,46
+582,Orbit Football 582,7734.0,4418.0,7,60
+583,Terra Tea Pack 583,76.0,39.0,9,36
+584,Zento Phone Case 584,2103.0,1552.0,2,17
+585,Blaze Air Fryer 585,4069.0,2778.0,3,60
+586,Zento Charger 586,1032.0,547.0,2,39
+587,Aura Headphones 587,5670.0,4276.0,1,15
+588,Kora Self-Help Book 588,105.0,69.0,5,20
+589,Lumi Perfume 589,242.0,172.0,6,16
+590,Orbit Shampoo 590,879.0,522.0,6,51
+591,Nexa Air Fryer 591,3349.0,2095.0,3,6
+592,Vita Cookbook 592,500.0,261.0,5,45
+593,Zento Tablet 593,36319.0,27334.0,1,34
+594,Pixel Screen Guard 594,3046.0,1562.0,2,5
+595,Orbit Study Table 595,5511.0,4196.0,10,37
+596,Terra Dumbbell Set 596,211.0,162.0,7,46
+597,Vita Study Table 597,4543.0,3401.0,10,44
+598,Terra Olive Oil 598,143.0,65.0,9,32
+599,Lumi Shampoo 599,262.0,147.0,6,21
+600,Zento Bed Frame 600,2650.0,1689.0,10,10
