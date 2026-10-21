@@ -107,5 +107,79 @@ JOIN order_items as oi
 ON oi.order_id = o.order_id
 GROUP BY 1
 HAVING  COUNT(o.order_id) > 25
- 
+
+
+/*
+4. Monthly Sales Trend
+Query monthly total sales over the past year.
+Challenge: Display the sales trend, grouping by month, return current_month sale, last month sale!
+*/
+
+SELECT 
+   Year,
+   month,
+   total_sale as current_month_sale,
+   LAG(total_sale, 1) OVER(ORDER BY year, month) as last_month_sale
+FROM 
+(
+SELECT
+ EXTRACT(MONTH FROM o.order_date) as month,
+ EXTRACT(YEAR FROM o.order_date) as Year,
+ SUM(oi.total_price) as total_sale
+FROM order_items as oi
+JOIN orders as o 
+ON o.order_id = oi.order_id
+WHERE order_date >= CURRENT_DATE - INTERVAL '1 year'
+GROUP BY 1 , 2
+ORDER BY 2 ,1
+) as t1
+
+
+
+/*
+5. Customers with No Purchases
+Find customers who have registered but never placed an order.
+Challenge: List customer details and the time since their registration.
+*/
+
+
+
+SELECT
+* FROM customers as c
+LEFT JOIN 
+orders as o
+ON o.customer_id = c.customer_id
+WHERE o.customer_id IS NULL
+
+
+/*
+6. Least-Selling Categories by State
+Identify the least-selling product category for each state.
+Challenge: Include the total sales for that category within each state.
+*/
+
+WITH ranking_table AS (
+    SELECT
+        c.state,
+        cat.category_name,
+        SUM(oi.total_price) AS total_sale,
+        RANK() OVER (PARTITION BY c.state ORDER BY SUM(oi.total_price) ASC) AS rnk
+    FROM orders AS o
+    JOIN customers AS c    ON o.customer_id  = c.customer_id
+    JOIN order_items AS oi ON o.order_id     = oi.order_id
+    JOIN products AS p     ON p.product_id   = oi.product_id
+    JOIN category AS cat   ON cat.category_id = p.category_id
+    GROUP BY 1, 2
+)
+SELECT *
+FROM ranking_table
+WHERE rnk = 1
+ORDER BY state;
+
+/*
+7. Customer Lifetime Value (CLTV)
+Calculate the total value of orders placed by each customer over their lifetime.
+Challenge: Rank customers based on their CLTV.
+*/
+
 
