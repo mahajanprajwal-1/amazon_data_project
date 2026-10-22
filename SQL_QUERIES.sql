@@ -182,4 +182,81 @@ Calculate the total value of orders placed by each customer over their lifetime.
 Challenge: Rank customers based on their CLTV.
 */
 
+SELECT 
+c.customer_id,
+CONCAT(c.f_name,' ',c.l_name) as full_name,
+COUNT(DISTINCT oi.order_id) as No_of_orders,
+SUM(oi.total_price) as total_value,
+RANK() OVER( ORDER BY SUM(oi.total_price) DESC )as cltv_rank
+FROM customers as c
+JOIN orders as o
+ON c.customer_id = o.customer_id
+JOIN order_items as oi
+ON oi.order_id = o.order_id
+GROUP BY 1 , 2
+ORDER BY cltv_rank;
+
+
+/*
+8. Inventory Stock Alerts
+Query products with stock levels below a certain threshold (e.g., less than 10 units).
+Challenge: Include
+last restock date and warehouse information.
+*/
+
+
+SELECT
+inv.inventory_id,
+p.product_name,
+inv.stock_remaining as current_stock_left,
+inv.ware_house_id,
+inv.restock_date
+FROM inventory as inv
+JOIN products as p
+ON inv.product_id = p.product_id
+WHERE inv.stock_remaining < 50
+
+/*
+9. Shipping Delays
+Identify orders where the shipping date is later than 2 days after the order date.
+Challenge: Include customer, order details, and delivery provider.
+*/
+
+SELECT
+o.*,
+c.customer_id,
+CONCAT(c.f_name,' ',c.l_name) as full_name,
+s.shipping_date - o.order_date as days_to_ship
+FROM orders as o
+JOIN customers as c
+ON c.customer_id = o.customer_id
+JOIN shipping as s
+ON s.order_id = o.order_id
+WHERE s.shipping_date - o.order_date > 2
+
+/*
+10. Payment Success Rate
+Calculate the percentage of successful payments across all orders.
+Challenge: Include breakdowns by payment status (e.g., failed, pending).
+*/
+
+SELECT
+    payment_status,
+    COUNT(*) AS payment_count,
+    ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (), 2) AS pct_of_total
+FROM payments
+GROUP BY payment_status
+ORDER BY payment_count DESC;
+
+
+
+/*
+11. Top Performing Sellers
+Find the top 5 sellers based on total sales value.
+Challenge: Include both successful and failed orders, and display their percentage of successful orders.
+*/
+
+
+
+
 
