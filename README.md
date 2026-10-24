@@ -220,7 +220,3 @@ All figures come from the dataset (1 Jan 2024 to 19 Oct 2026).
 - Schedule refresh after moving the data to a database
 
 ---
-
-## Author
-
-**Your Name**  ·  [LinkedIn](https://www.linkedin.com/) · [GitHub](https://github.com/)
