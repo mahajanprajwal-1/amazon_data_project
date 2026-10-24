@@ -1,0 +1,72 @@
+table Dim_Product
+	lineageTag: 40507c03-0b07-422e-8d01-92b6db451637
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f920849b-a4b9-4716-948b-7d93f1c4d904
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 527238b7-c840-4bdf-9ec8-937115eb98dc
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: double
+		lineageTag: b27ddf90-31f1-40bb-9e09-84ed15da7c0a
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cogs
+		dataType: double
+		lineageTag: 109f75e2-f207-4087-adf2-e1d0171fa3c7
+		summarizeBy: sum
+		sourceColumn: cogs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column category_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d9e55f4-8e3c-4e23-9545-4f6c08517c9e
+		summarizeBy: sum
+		sourceColumn: category_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: a72e0530-83f4-473e-9312-9c7b5f5e9417
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Product = m
+		mode: import
+		source =
+				let
+				    Source = products,
+				    RemoveLinks = Table.RemoveColumns(Source, {"public.category", "public.sellers", "seller_id"}, MissingField.Ignore),
+				    MergeCat = Table.NestedJoin(RemoveLinks, {"category_id"}, category, {"category_id"}, "cat", JoinKind.LeftOuter),
+				    ExpandCat = Table.ExpandTableColumn(MergeCat, "cat", {"category_name"})
+				in
+				    ExpandCat
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,40 @@
+relationship 9694352f-9703-4144-9aea-238532b28e37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_Inventory.restock_date
+	toColumn: LocalDateTable_c31430de-cc34-4110-9556-b606edb085db.Date
+
+relationship 3dba0428-660b-43a0-989f-633d4f80334e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_Sales.payment_date
+	toColumn: LocalDateTable_613cc30e-5b72-4b29-bd76-891de146da27.Date
+
+relationship 9018ab6d-a643-4fd9-8ee6-fe8b91665179
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_Sales.shipping_date
+	toColumn: LocalDateTable_134ce080-d761-4fbf-ac9e-9f5a69bfca10.Date
+
+relationship ffc20393-7808-4365-b857-13d4ecdc7f62
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_Sales.return_date
+	toColumn: LocalDateTable_66e1bfe2-ca30-4524-ba89-6cc169d3c2b1.Date
+
+relationship AutoDetected_0f34efde-563b-4dea-b20c-a6b08c8982dd
+	fromColumn: Fact_Sales.customer_id
+	toColumn: Dim_Customer.customer_id
+
+relationship AutoDetected_8f2dec36-786c-4de2-b38a-ae1951523802
+	fromColumn: Fact_Inventory.product_id
+	toColumn: Dim_Product.product_id
+
+relationship AutoDetected_8561d05c-82d9-4787-8eda-1424864f6def
+	fromColumn: Fact_Sales.product_id
+	toColumn: Dim_Product.product_id
+
+relationship AutoDetected_de520a27-835d-4d24-afd0-5c493f0a5a35
+	fromColumn: Fact_Sales.seller_id
+	toColumn: Dim_Seller.seller_id
+
+relationship 826eb005-e94b-e15a-be21-85b0963bad54
+	fromColumn: Fact_Sales.order_date
+	toColumn: Dim_Date.Date
+

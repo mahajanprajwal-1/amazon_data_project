@@ -1,0 +1,68 @@
+table Fact_Inventory
+	lineageTag: 42f63467-2865-4e23-b03a-8fc8c607f370
+
+	column inventory_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 444ac09c-82d4-4aba-86c5-ca8a4ede0b31
+		summarizeBy: sum
+		sourceColumn: inventory_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c2d7b24-ad77-44b4-a030-762e37aa81fe
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column stock_remaining
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bc9472f-cd3e-411f-bd4b-a80961910937
+		summarizeBy: sum
+		sourceColumn: stock_remaining
+
+		annotation SummarizationSetBy = Automatic
+
+	column ware_house_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 61f6174a-993c-4103-96aa-07a069472260
+		summarizeBy: sum
+		sourceColumn: ware_house_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column restock_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 2bee2be9-78ab-4f69-803b-0f95607c3d6d
+		summarizeBy: none
+		sourceColumn: restock_date
+
+		variation Variation
+			isDefault
+			relationship: 9694352f-9703-4144-9aea-238532b28e37
+			defaultHierarchy: LocalDateTable_c31430de-cc34-4110-9556-b606edb085db.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Fact_Inventory = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "amazon_db"),
+				    public_inventory = Source{[Schema="public",Item="inventory"]}[Data]
+				in
+				    public_inventory
+
+	annotation PBI_ResultType = Table
+

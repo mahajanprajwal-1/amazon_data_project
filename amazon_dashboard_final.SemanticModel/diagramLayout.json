@@ -1,0 +1,110 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 76.039575687721481
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 943.69611737349567,
+            "y": 916.53032895863453
+          },
+          "nodeIndex": "Dim_Customer",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 546.08999009200238,
+            "y": -50
+          },
+          "nodeIndex": "Fact_Inventory",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 264.59087992160232,
+            "y": 446.42358858560806
+          },
+          "nodeIndex": "Dim_Seller",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1297.1052374518936,
+            "y": 421.26516447931726
+          },
+          "nodeIndex": "Dim_Product",
+          "nodeLineageTag": "40507c03-0b07-422e-8d01-92b6db451637",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1013.1052374518935,
+            "y": 383.26516447931726
+          },
+          "nodeIndex": "Fact_Sales",
+          "nodeLineageTag": "89c05ec5-705e-48ae-91b4-4e3b17451724",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 662.85382049315263,
+            "y": 251.9458464018166
+          },
+          "nodeIndex": "Dim_Date",
+          "nodeLineageTag": "768c5354-d77f-4ed2-944d-135a6278c0b4",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1316.5143575302914,
+            "y": 531.26516447931726
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "53ac8a2a-4737-42c5-9cff-99db8b699348",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 71.541695273640471,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

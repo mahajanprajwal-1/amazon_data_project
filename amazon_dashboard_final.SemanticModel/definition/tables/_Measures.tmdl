@@ -1,0 +1,131 @@
+table _Measures
+	lineageTag: 53ac8a2a-4737-42c5-9cff-99db8b699348
+
+	measure 'Gross Sales' = SUM ( Fact_Sales[total_price] )
+		formatString: "₹"\ #,0.00;#,0.00\ -"₹";"₹"\ #,0.00
+		lineageTag: 1f624b50-c386-4ad4-9a72-13c07d902203
+
+		annotation PBI_FormatHint = {"currencyCulture":"bn-IN"}
+
+	measure 'Net Revenue' =
+			
+			CALCULATE ( [Gross Sales], Fact_Sales[order_status] = "Delivered" )
+		formatString: "₹"\ #,0
+		lineageTag: 7ec79e27-0cbc-4eff-b84a-714fbb2b35d8
+
+	measure 'Total Orders' = DISTINCTCOUNT ( Fact_Sales[order_id] )
+		formatString: #,0
+		lineageTag: f1e4ce5e-2e22-4401-94fe-7c517348e4e7
+
+	measure 'Units Sold' = SUM ( Fact_Sales[quantity] )
+		formatString: #,0
+		lineageTag: a317e24d-affe-444d-9b3e-2f661d5659d9
+
+	measure AOV = DIVIDE ( [Gross Sales], [Total Orders] )
+		formatString: "₹"\ #,0
+		lineageTag: 709d046f-23e4-462e-abf0-df127c37b02f
+
+	measure 'Active Customers' = DISTINCTCOUNT ( Fact_Sales[customer_id] )
+		formatString: #,0
+		lineageTag: b427d6f8-a3d1-42c4-8d09-96b0aa127c50
+
+	measure 'Delivered COGS' = CALCULATE ( SUMX ( Fact_Sales, Fact_Sales[quantity] * RELATED ( Dim_Product[cogs] ) ), Fact_Sales[order_status] = "Delivered" )
+		formatString: "₹"\ #,0
+		lineageTag: 9799c9bd-3ad7-4123-8dc5-99b955aa0067
+
+	measure Profit = [Net Revenue] - [Delivered COGS]
+		formatString: "₹"\ #,0
+		lineageTag: 1c5d67e4-8e0a-43b5-b9bd-2d67224073a7
+
+	measure 'Profit Margin %' = DIVIDE ( [Profit], [Net Revenue] )
+		formatString: 0.0%
+		lineageTag: 781ce060-d3ca-4d8d-9a8b-67222f77f638
+
+	measure 'Return Rate %' = DIVIDE ( CALCULATE ( [Total Orders], Fact_Sales[order_status] = "Returned" ), [Total Orders] )
+		formatString: 0.0%
+		lineageTag: af0d8e90-60c1-4de6-af8a-e6d21516177d
+
+	measure 'Cancel Rate %' = DIVIDE ( CALCULATE ( [Total Orders], Fact_Sales[order_status] = "Cancelled" ), [Total Orders] )
+		formatString: 0.0%
+		lineageTag: dc3e6d59-4b74-43c1-a41b-9ce0643a0733
+
+	measure 'Payment Success %' = DIVIDE ( CALCULATE ( [Total Orders], Fact_Sales[payment_status] = "Paid" ), [Total Orders] )
+		formatString: 0.0%
+		lineageTag: 6a4a749c-06c4-40c4-a0f6-122474901efd
+
+	measure 'Failed Payments' = CALCULATE ( [Total Orders], Fact_Sales[payment_status] = "Failed" )
+		formatString: #,0
+		lineageTag: 4a276f15-ccfd-4c98-9c07-714212e70938
+
+	measure 'Avg Days to Ship' = AVERAGE ( Fact_Sales[Days to Ship] )
+		formatString: 0.0
+		lineageTag: 49be2fdf-4d85-49f3-a2cc-c7ac0d76af56
+
+	measure 'Delayed Orders' = CALCULATE ( [Total Orders], Fact_Sales[Days to Ship] > 2 )
+		formatString: #,0
+		lineageTag: eb133419-19c5-4b29-8eb1-915c76277d11
+
+	measure 'Delay Rate %' = DIVIDE ( [Delayed Orders], [Total Orders] )
+		formatString: 0.0%
+		lineageTag: 9f4f0c24-5b7f-42fd-9d71-47ea177879bf
+
+	measure 'Repeat Customers' = COUNTROWS ( FILTER ( VALUES ( Dim_Customer[customer_id] ), [Total Orders] > 1 ) )
+		formatString: #,0
+		lineageTag: acf64997-e9b2-4812-ad7c-6aedccec7c63
+
+	measure 'Repeat Rate %' = DIVIDE ( [Repeat Customers], [Active Customers] )
+		formatString: 0.0%
+		lineageTag: 5a5c3198-bdeb-4aee-8289-20b697e92871
+
+	measure 'Customers With No Orders' = COUNTROWS ( FILTER ( Dim_Customer, [Total Orders] = 0 ) )
+		formatString: #,0
+		lineageTag: 1d641b7f-9b9d-4087-89dc-4070d9c7df28
+
+	measure 'Avg CLTV' = DIVIDE ( [Gross Sales], [Active Customers] )
+		formatString: "₹"\ #,0
+		lineageTag: 952730f6-0a94-4358-b8c9-19849c94c74b
+
+	measure 'Sales Last Month' = CALCULATE ( [Gross Sales], DATEADD ( Dim_Date[Date], -1, MONTH ) )
+		formatString: "₹"\ #,0
+		lineageTag: 640a2ffb-d82a-493b-869c-6c50e4b6239b
+
+	measure 'MoM Growth %' = DIVIDE ( [Gross Sales] - [Sales Last Month], [Sales Last Month] )
+		formatString: 0.0%
+		lineageTag: b2f6fbb2-e62b-48e4-bd9a-e47e1ac33e78
+
+	measure 'Net Revenue LY' = VAR LastDataDate = CALCULATE ( MAX ( Fact_Sales[order_date] ), ALL ( Fact_Sales ) ) RETURN CALCULATE ( [Net Revenue], FILTER ( SAMEPERIODLASTYEAR ( Dim_Date[Date] ), Dim_Date[Date] <= EDATE ( LastDataDate, -12 ) ) )
+		formatString: "₹"\ #,0
+		lineageTag: c0bf82f9-ea77-4a41-9744-7b1f953387e2
+
+	measure 'Net Revenue YoY %' = IF ( HASONEVALUE ( Dim_Date[Year] ), DIVIDE ( [Net Revenue] - [Net Revenue LY], [Net Revenue LY] ) )
+		formatString: 0.0%
+		lineageTag: 8a3f8e25-bb96-405d-857b-e31196b9beaf
+
+	measure 'Category Share %' = DIVIDE ( [Gross Sales], CALCULATE ( [Gross Sales], ALLSELECTED ( Dim_Product[category_name] ) ) )
+		formatString: 0.0%
+		lineageTag: 0f8eea03-3fb4-4aac-87ce-fd6f2891fa3b
+
+	measure 'Failed Orders' = CALCULATE ( [Total Orders], Fact_Sales[order_status] IN { "Cancelled", "Returned" } )
+		formatString: #,0
+		lineageTag: f77ea62b-4b10-417e-918d-253c3186f08c
+
+	measure 'Seller Success %' = DIVIDE ( CALCULATE ( [Total Orders], Fact_Sales[order_status] = "Delivered" ), [Total Orders] )
+		formatString: 0.0%
+		lineageTag: 6c42182a-b741-4bb1-b4dc-41a3fcadc544
+
+	measure 'Low Stock Items' = CALCULATE ( COUNTROWS ( Fact_Inventory ), Fact_Inventory[stock_remaining] < 50 )
+		formatString: #,0
+		lineageTag: 3907ff64-1017-4d9b-800d-12fa01ee9821
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "amazon_dashboard_final"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "33cfe136-0b76-4673-84fc-138a869653ba"
+  }
+}

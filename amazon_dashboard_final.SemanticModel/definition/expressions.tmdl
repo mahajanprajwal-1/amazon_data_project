@@ -1,0 +1,72 @@
+expression category =
+		let
+		    Source = PostgreSQL.Database("localhost", "amazon_db"),
+		    public_category = Source{[Schema="public",Item="category"]}[Data]
+		in
+		    public_category
+	lineageTag: b1785330-c119-4891-9b32-8bff670c0fcd
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression order_items =
+		let
+		    Source = PostgreSQL.Database("localhost", "amazon_db"),
+		    public_order_items = Source{[Schema="public",Item="order_items"]}[Data]
+		in
+		    public_order_items
+	lineageTag: d675df29-e519-453a-8897-4179a80c778c
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression orders =
+		let
+		    Source = PostgreSQL.Database("localhost", "amazon_db"),
+		    public_orders = Source{[Schema="public",Item="orders"]}[Data]
+		in
+		    public_orders
+	lineageTag: 87f470dc-ee85-4653-ba43-7aca598fbc1a
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression payments =
+		let
+		    Source = PostgreSQL.Database("localhost", "amazon_db"),
+		    public_payments = Source{[Schema="public",Item="payments"]}[Data]
+		in
+		    public_payments
+	lineageTag: 49179a99-85c1-4be9-9a7d-42f7b5cda5ac
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression products =
+		let
+		    Source = PostgreSQL.Database("localhost", "amazon_db"),
+		    public_products = Source{[Schema="public",Item="products"]}[Data]
+		in
+		    public_products
+	lineageTag: 7109b99f-40bd-429a-98c7-ba18c4e9ede4
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression shipping =
+		let
+		    Source = PostgreSQL.Database("localhost", "amazon_db"),
+		    public_shipping = Source{[Schema="public",Item="shipping"]}[Data]
+		in
+		    public_shipping
+	lineageTag: c242494e-c8d6-4c64-bbec-0bdd1f493a38
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

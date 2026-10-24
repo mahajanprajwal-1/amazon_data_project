@@ -1,0 +1,86 @@
+table Dim_Date
+	lineageTag: 768c5354-d77f-4ed2-944d-135a6278c0b4
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: 4d6ea821-9643-4657-82a3-4d6a294a4e0e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: aceb3bf4-6754-4dea-b0ff-98b7faf052c5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month No'
+		formatString: 0
+		lineageTag: d15c7434-52a1-4900-a3de-64826e0bfe89
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month No]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 04f0728b-5f76-495a-aa9a-5e81100fbd72
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+		sortByColumn: 'Month No'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year'
+		lineageTag: 07262042-15e7-4a37-beaf-e9742826fdee
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Year]
+		sortByColumn: YearMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 1d0cb384-2870-4f4a-81f3-90841fdc0c0c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		formatString: 0
+		lineageTag: 629f2453-03af-4a51-9e6c-6eb43ca686ed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Date = calculated
+		mode: import
+		source =
+				
+				VAR MinYear = YEAR ( MIN ( Fact_Sales[order_date] ) )
+				VAR MaxYear = YEAR ( MAX ( Fact_Sales[order_date] ) )
+				RETURN
+				ADDCOLUMNS (
+				    CALENDAR ( DATE ( MinYear, 1, 1 ), DATE ( MaxYear, 12, 31 ) ),
+				    "Year", YEAR ( [Date] ),
+				    "Month No", MONTH ( [Date] ),
+				    "Month", FORMAT ( [Date], "MMM" ),
+				    "Month Year", FORMAT ( [Date], "MMM YYYY" ),
+				    "Quarter", "Q" & QUARTER ( [Date] ),
+				    "YearMonth", YEAR ( [Date] ) * 100 + MONTH ( [Date] )
+				)
+
+	annotation PBI_Id = 9cf3b6fc546249589da8a4294a4cf90a
+

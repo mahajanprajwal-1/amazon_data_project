@@ -1,0 +1,207 @@
+table Fact_Sales
+	lineageTag: 89c05ec5-705e-48ae-91b4-4e3b17451724
+
+	column order_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 99b42a60-bfd5-4e24-a0fa-682ba8a89869
+		summarizeBy: sum
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 648109bb-c239-40a3-9ff3-b5d5cd5e1564
+		summarizeBy: sum
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d9713cb3-e363-4b37-9b15-668d1a733bf7
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ab7fdbc-488c-41ca-8540-c016843151a7
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_per_unit
+		dataType: double
+		lineageTag: ad14f217-f3bf-4776-9b8d-c75c07431240
+		summarizeBy: sum
+		sourceColumn: price_per_unit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_price
+		dataType: double
+		lineageTag: 63d83cd0-311d-4d53-97ad-b2990832b199
+		summarizeBy: sum
+		sourceColumn: total_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0a9bb2da-a3ab-48b5-8010-8081ba29c6f1
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 58df27bc-8357-4b2e-a2c9-5b93ba169cd6
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: 6d7d5e9a-bd72-4504-a040-f00858333917
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: int64
+		formatString: 0
+		lineageTag: aef8c4bd-eb98-491d-80f8-5b7ad35a09fd
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_mode
+		dataType: string
+		lineageTag: e112b674-f99d-4001-8f1c-fdcd118996de
+		summarizeBy: none
+		sourceColumn: payment_mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_status
+		dataType: string
+		lineageTag: 0877f049-986e-4841-b239-8d14c732cf49
+		summarizeBy: none
+		sourceColumn: payment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3c4e21fd-1fde-4f60-8a69-77d21cc2263c
+		summarizeBy: none
+		sourceColumn: payment_date
+
+		variation Variation
+			isDefault
+			relationship: 3dba0428-660b-43a0-989f-633d4f80334e
+			defaultHierarchy: LocalDateTable_613cc30e-5b72-4b29-bd76-891de146da27.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column delivery_status
+		dataType: string
+		lineageTag: 7642f7fb-cd83-4956-931a-9e54b6610c8c
+		summarizeBy: none
+		sourceColumn: delivery_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ea0a7f23-c9b4-481a-9042-da7a75510ceb
+		summarizeBy: none
+		sourceColumn: shipping_date
+
+		variation Variation
+			isDefault
+			relationship: 9018ab6d-a643-4fd9-8ee6-fe8b91665179
+			defaultHierarchy: LocalDateTable_134ce080-d761-4fbf-ac9e-9f5a69bfca10.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column return_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d136fa06-a82d-49f0-a722-01378a909e56
+		summarizeBy: none
+		sourceColumn: return_date
+
+		variation Variation
+			isDefault
+			relationship: ffc20393-7808-4365-b857-13d4ecdc7f62
+			defaultHierarchy: LocalDateTable_66e1bfe2-ca30-4524-ba89-6cc169d3c2b1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Days to Ship'
+		dataType: int64
+		formatString: 0
+		lineageTag: 01e3058a-93ce-4eb0-ade7-e9a33c0827a3
+		summarizeBy: sum
+		sourceColumn: Days to Ship
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Sales = m
+		mode: import
+		source =
+				let
+				    Source = order_items,
+				    RemoveLinks = Table.RemoveColumns(Source, {"public.orders", "public.products"}, MissingField.Ignore),
+				
+				    MergeOrders = Table.NestedJoin(RemoveLinks, {"order_id"}, orders, {"order_id"}, "ord", JoinKind.LeftOuter),
+				    ExpandOrders = Table.ExpandTableColumn(MergeOrders, "ord",
+				        {"order_date", "customer_id", "order_status", "seller_id"}),
+				
+				    MergePayments = Table.NestedJoin(ExpandOrders, {"order_id"}, payments, {"order_id"}, "pay", JoinKind.LeftOuter),
+				    ExpandPayments = Table.ExpandTableColumn(MergePayments, "pay",
+				        {"payment_mode", "payment_status", "payment_date"}),
+				
+				    MergeShipping = Table.NestedJoin(ExpandPayments, {"order_id"}, shipping, {"order_id"}, "ship", JoinKind.LeftOuter),
+				    ExpandShipping = Table.ExpandTableColumn(MergeShipping, "ship",
+				        {"delivery_status", "shipping_date", "return_date"}),
+				
+				    AddDaysToShip = Table.AddColumn(ExpandShipping, "Days to Ship",
+				        each if [shipping_date] = null or [order_date] = null then null
+				             else Duration.Days(Date.From([shipping_date]) - Date.From([order_date])),
+				        Int64.Type)
+				in
+				    AddDaysToShip
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

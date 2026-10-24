@@ -1,0 +1,55 @@
+table Dim_Customer
+	lineageTag: 0bbfcdb7-3b6e-42f4-839a-57ebe6225fb4
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f9653dbd-558e-4020-8240-3993770bff98
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column f_name
+		dataType: string
+		lineageTag: b9a671a3-0d90-4889-8c3a-50be4d57f3d2
+		summarizeBy: none
+		sourceColumn: f_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column l_name
+		dataType: string
+		lineageTag: b96e09e6-c79e-493e-a0c0-98d60ba54672
+		summarizeBy: none
+		sourceColumn: l_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: e2973aa1-ea02-46c0-a1e8-c2844b335238
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column address
+		dataType: string
+		lineageTag: d7e2b686-f071-403c-9ead-9a5504d2853d
+		summarizeBy: none
+		sourceColumn: address
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Customer = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "amazon_db"),
+				    public_customers = Source{[Schema="public",Item="customers"]}[Data]
+				in
+				    public_customers
+
+	annotation PBI_ResultType = Table
+

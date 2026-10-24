@@ -1,0 +1,39 @@
+table Dim_Seller
+	lineageTag: d178f7d2-d95a-446e-a99b-a18abfea82f2
+
+	column seller_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f9508f1-1c28-413c-8268-555e54dfd3dc
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_name
+		dataType: string
+		lineageTag: 342daf89-0d4e-47b9-a839-c46578b886e3
+		summarizeBy: none
+		sourceColumn: seller_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand_type
+		dataType: string
+		lineageTag: 47b4dae4-1630-4dd2-b0ab-f48752ce4efb
+		summarizeBy: none
+		sourceColumn: brand_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Seller = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "amazon_db"),
+				    public_sellers = Source{[Schema="public",Item="sellers"]}[Data]
+				in
+				    public_sellers
+
+	annotation PBI_ResultType = Table
+
